@@ -26,11 +26,14 @@ while True:
                 print("Ingresando Estudiantes")
                 cantidad_estudiantes = int(input("Ingrese la cantidad de estudiantes que desea ingresar: "))
                 for estudiante in range(cantidad_estudiantes):
-                    estudiantes.append(input(f"Ingrese el nombre del estudiante #{estudiante + 1}: "))
+                    estudiantes.append(input(f"Ingrese el nombre del estudiante #{estudiante + 1}: ").capitalize())
             case 2:
                 print("Lista de Estudiantes")
-                resultado = quick_sort(estudiantes)
-                print(resultado)
+                if len(estudiantes) <= 0:
+                    print("No hay estudiantes ingresados")
+                else:
+                    resultado = quick_sort(estudiantes)
+                    print(resultado)
             case 3:
                 print("Gracias por utilizar el programa")
                 break
